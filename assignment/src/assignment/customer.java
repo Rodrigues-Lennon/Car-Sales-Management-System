@@ -27,7 +27,7 @@ public class customer extends JFrame {
 	private JTextField tlname;
 	private JTextField tadd;
 	private final ButtonGroup buttonGroup = new ButtonGroup();
-	private String fname,lname,address,dob,gender;
+	private String fname,lname,cname,address,dob,gender;
 
 	/**
 	 * Launch the application.
@@ -111,6 +111,7 @@ public class customer extends JFrame {
 		contentPane.add(lblNewLabel_1_3);
 		
 		JRadioButton rb1 = new JRadioButton("Male");
+		rb1.setSelected(true);
 		buttonGroup.add(rb1);
 		rb1.setFont(new Font("Times New Roman", Font.PLAIN, 20));
 		rb1.setBounds(184, 279, 137, 37);
@@ -137,6 +138,8 @@ public class customer extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				fname=tfname.getText();
 				lname=tlname.getText();
+				cname=fname+" "+lname;
+				System.out.println(cname);
 				address=tadd.getText();
 				if(rb1.isSelected()) {
 					gender=rb1.getText();
@@ -144,10 +147,12 @@ public class customer extends JFrame {
 				if(rb2.isSelected()) {
 					gender=rb2.getText();
 				}
-				address=cbdate.getSelectedItem().toString()+cbmonth.getSelectedItem().toString()+cbyear.getSelectedItem().toString();
+				dob=cbdate.getSelectedItem().toString()+" "+cbmonth.getSelectedItem().toString()+" "+cbyear.getSelectedItem().toString();
+				System.out.println(dob);
 				JOptionPane.showMessageDialog(null, "Select a Car");
 				car carFrame = new car();
 				carFrame.setVisible(true);
+				carFrame.customerData.setText("Customer Name: "+cname+"\nDate of Birth: "+dob+"\nGender: "+gender+"\nAddress: "+address);
 			}
 		});
 		bt1.setFont(new Font("Times New Roman", Font.PLAIN, 20));
