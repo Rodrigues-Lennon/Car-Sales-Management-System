@@ -47,7 +47,7 @@ public class customer extends JFrame {
 
 	/**
 	 * Create the frame.
-	 */
+	 */ 
 	public customer() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 660, 585);
