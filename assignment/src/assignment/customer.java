@@ -68,7 +68,7 @@ public class customer extends JFrame {
 		contentPane.add(lblNewLabel_1);
 		
 		tfname = new JTextField();
-		tfname.setColumns(10);
+		tfname.setColumns(10); 
 		tfname.setBounds(184, 85, 352, 37);
 		contentPane.add(tfname);
 		
