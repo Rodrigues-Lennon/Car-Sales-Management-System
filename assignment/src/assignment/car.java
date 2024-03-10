@@ -131,7 +131,7 @@ public class car extends JFrame {
 				String model=cbmodel.getSelectedItem().toString();
 				String make=cbmake.getSelectedItem().toString();
 				String fuel=cbfuel.getSelectedItem().toString();
-				String milage=cbmilage.getSelectedItem().toString();
+				String mileage=cbmilage.getSelectedItem().toString();
 				String engine=cbengine.getSelectedItem().toString();
 				
 				JOptionPane.showMessageDialog(null, "Confirm Order by Payment");
@@ -139,6 +139,8 @@ public class car extends JFrame {
 				mop.setVisible(true);
 				CustomerData=customerData.getText();
 				System.out.println(CustomerData);
+				mop.carData.setText("Make: "+make+"\nModel: "+model+"\nFuel Type: "+fuel+"\nMileage"+mileage+"\nEngine: "+engine);
+				mop.customerdata.setText(CustomerData);
 			}
 		});
 		bt1.setFont(new Font("Times New Roman", Font.PLAIN, 20));
